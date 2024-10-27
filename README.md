@@ -19,3 +19,7 @@ Run the **download-spotify-playlist.sh** script passing the 'playlist URL' and '
 That's not the best way to download musics from spotify, you can make it much more simple just using 'yt-dlp' to search and dowload the music. I used it only to download.
 
 The real purpose of this project was to practice some **bash** and work a litle with **regular expressions**.
+
+### Fix
+
+Actually download at most 30 musics, because is the amount that the spotify site load on the start.
