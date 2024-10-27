@@ -14,7 +14,7 @@ if [ $# -eq 1 ]; then
 fi
 
 LINK="$1"
-PATH="$2"
+PATH_FILE="$2"
 
 # get the liks of the music on the playlist
 ./get-musics-in-playlist.sh "$LINK"
@@ -35,7 +35,7 @@ while IFS= read -r link; do
 
 	MUSIC_NAME=$( echo "$link" | grep -oP '(?<=query=)(.*?)(?=$)' | sed 's/+/_/g' )
 
-	./download-music.sh "$MUSIC_LINK" "$PATH/$MUSIC_NAME"
+	./download-music.sh "$MUSIC_LINK" "$PATH_FILE/$MUSIC_NAME"
 
 	echo "$MUSIC_NAME downloaded."
 

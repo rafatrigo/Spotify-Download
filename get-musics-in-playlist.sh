@@ -17,6 +17,6 @@ OUTPUT_FILE="music-links.txt"
 
 # make a GET requisition on the URL and get the music links
 
-curl "${URL}" | grep -oP "${SEARCH_FOR}"'\K[^"]+' > ${OUTPUT_FILE}
+curl "$URL" | grep -oP "$SEARCH_FOR"'\K[^"]+' >> "$OUTPUT_FILE"
 
 exit 0
